@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Government Sandipani School Chhatwai, Shahdol MP - स्कूल की जानकारी, शिक्षा, शिक्षक, गतिविधियां और सूचनाएं।">
+<title>Government Sandipani School Chhatwai | Shahdol</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+:root{
+  --blue:#123b70;
+  --gold:#ffbd39;
+  --light:#f3f7fc;
+  --dark:#18263a;
+}
+body{
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.6;
+}
+header{
+  background:white;
+  padding:12px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 3px 12px #0001;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo-icon{
+  background:var(--blue);
+  color:white;
+  border-radius:12px;
+  padding:10px;
+  font-size:25px;
+}
+.logo h2{
+  color:var(--blue);
+  font-size:17px;
+}
+.logo small{
+  color:#666;
+  font-size:11px;
+}
+nav{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+nav a{
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:bold;
+  font-size:14px;
+}
+nav a:hover{color:#e59b14}
+.menu-btn{
+  display:none;
+  border:0;
+  background:var(--blue);
+  color:white;
+  padding:8px 13px;
+  border-radius:7px;
+  font-size:20px;
+}
+.hero{
+  min-height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  color:white;
+  background:
+  linear-gradient(120deg,#09284fef,#145d91e8),
+  radial-gradient(circle at top right,#65b5d9,#123b70);
+}
+.hero-content{max-width:850px}
+.hero .tag{
+  display:inline-block;
+  background:#ffffff20;
+  border:1px solid #ffffff60;
+  padding:7px 18px;
+  border-radius:30px;
+  margin-bottom:20px;
+}
+.hero h1{
+  font-size:clamp(30px,5vw,52px);
+  line-height:1.3;
+  margin-bottom:18px;
+}
+.hero p{
+  font-size:17px;
+  color:#e8f1ff;
+  margin-bottom:25px;
+}
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  background:var(--gold);
+  color:#222;
+  padding:12px 25px;
+  border-radius:7px;
+  font-weight:bold;
+  margin:5px;
+  border:0;
+  cursor:pointer;
+}
+.btn-outline{
+  background:transparent;
+  border:1px solid white;
+  color:white;
+}
+section{
+  padding:65px 7%;
+  scroll-margin-top:75px;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+.section-title h2{
+  color:var(--blue);
+  font-size:30px;
+}
+.section-title p{color:#777;margin-top:7px}
+.about-grid,.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+.about-box{
+  background:white;
+  padding:28px;
+  border-radius:14px;
+  box-shadow:0 5px 20px #0000000a;
+}
+.about-art{
+  background:linear-gradient(140deg,#123b70,#3186ae);
+  min-height:280px;
+  border-radius:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:100px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:white;
+  padding:25px;
+  border-radius:13px;
+  box-shadow:0 5px 20px #0000000b;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px #0002;
+}
+.card-icon{font-size:35px;margin-bottom:10px}
+.card h3{color:var(--blue);margin-bottom:8px}
+.classes .card{text-align:center}
+.teacher{
+  text-align:center;
+}
+.teacher .avatar{
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  background:#e6f0ff;
+  display:grid;
+  place-items:center;
+  font-size:40px;
+  margin:0 auto 15px;
+}
+.notice{
+  background:white;
+  padding:20px;
+  border-left:5px solid var(--gold);
+  border-radius:8px;
+  margin-bottom:13px;
+}
+.notice h3{color:var(--blue)}
+.notice small{color:#777}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+.gallery-item{
+  min-height:170px;
+  border-radius:12px;
+  background:linear-gradient(140deg,#164b78,#65a9c9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:50px;
+  overflow:hidden;
+}
+.gallery-item img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
+.achievement{
+  text-align:center;
+  background:var(--blue);
+  color:white;
+  border-radius:14px;
+  padding:28px;
+}
+.achievement h2{font-size:35px;color:var(--gold)}
+.search-box{
+  max-width:550px;
+  margin:0 auto 30px;
+  display:flex;
+  background:white;
+  border:1px solid #ddd;
+  border-radius:9px;
+  overflow:hidden;
+}
+.search-box input{
+  flex:1;
+  min-width:0;
+  border:0;
+  outline:none;
+  padding:14px;
+  font-size:15px;
+}
+.search-box button{
+  background:var(--blue);
+  color:white;
+  border:0;
+  padding:0 20px;
+  cursor:pointer;
+}
+.contact-info{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+}
+.contact-info p{margin:12px 0}
+.contact-form{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+}
+.contact-form input,.contact-form textarea{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:1px solid #ddd;
+  border-radius:7px;
+  font:inherit;
+}
+footer{
+  background:#0b2444;
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+}
+footer p{margin:5px}
+.back-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:var(--gold);
+  color:#222;
+  border:0;
+  padding:12px 16px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:20px;
+}
+.empty{
+  text-align:center;
+  color:#888;
+  padding:20px;
+  display:none;
+}
+@media(max-width:850px){
+  .menu-btn{display:block}
+  nav{
+    display:none;
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:20px;
+    flex-direction:column;
+    align-items:flex-start;
+    box-shadow:0 5px 10px #0002;
+  }
+  nav.active{display:flex}
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  section{padding:48px 5%}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .hero{min-height:450px}
+  .logo h2{font-size:14px}
+  .section-title h2{font-size:25px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🏫</div>
+    <div>
+      <h2>सांदीपनि विद्यालय</h2>
+      <small>छतवई, जिला शहडोल (म.प्र.)</small>
+    </div>
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="मेनू खोलें">☰</button>
+  <nav id="nav">
+    <a href="#home" onclick="closeMenu()">होम</a>
+    <a href="#about" onclick="closeMenu()">हमारे बारे में</a>
+    <a href="#classes" onclick="closeMenu()">कक्षाएं</a>
+    <a href="#teachers" onclick="closeMenu()">शिक्षक</a>
+    <a href="#notices" onclick="closeMenu()">नोटिस</a>
+    <a href="#gallery" onclick="closeMenu()">गैलरी</a>
+    <a href="#contact" onclick="closeMenu()">संपर्क</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<div class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">ज्ञान • अनुशासन • संस्कार</div>
+    <h1>Government Sandipani School Chhatwai</h1>
+    <p>शिक्षा के माध्यम से उज्ज्वल भविष्य की ओर एक कदम।</p>
+    <a href="#about" class="btn">स्कूल के बारे में जानें</a>
+    <a href="#contact" class="btn btn-outline">संपर्क करें</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title">
+    <h2>हमारे विद्यालय के बारे में</h2>
+    <p>Government Sandipani School, Chhatwai</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-box">
+      <h2 style="color:#123b70;margin-bottom:15px">हमारा परिचय</h2>
+      <p>
+        Government Sandipani School Chhatwai मध्य प्रदेश के
+        शहडोल जिले के छतवई क्षेत्र में स्थित विद्यालय है।
+        हमारा उद्देश्य विद्यार्थियों को गुणवत्तापूर्ण शिक्षा,
+        अनुशासन, अच्छे संस्कार और आगे बढ़ने के अवसर प्रदान करना है।
+      </p>
+      <br>
+      <p><b>विद्यालय:</b> Government Sandipani School</p>
+      <p><b>स्थान:</b> छतवई, जिला शहडोल, मध्य प्रदेश</p>
+      <p><b>शिक्षा:</b> विद्यालय की वास्तविक कक्षा जानकारी यहां अपडेट करें।</p>
+    </div>
+    <div class="about-art">🎓</div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section style="background:white">
+  <div class="section-title">
+    <h2>हमारी विशेषताएं</h2>
+    <p>विद्यार्थियों के विकास के लिए</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">📚</div>
+      <h3>गुणवत्तापूर्ण शिक्षा</h3>
+      <p>विद्यार्थियों के ज्ञान और कौशल के विकास पर ध्यान।</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">👨‍🏫</div>
+      <h3>अनुभवी शिक्षक</h3>
+      <p>शिक्षकों के मार्गदर्शन में सीखने का अवसर।</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏆</div>
+      <h3>खेल एवं गतिविधियां</h3>
+      <p>पढ़ाई के साथ खेल और अन्य गतिविधियों में भागीदारी।</p>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes">
+  <div class="section-title">
+    <h2>हमारी कक्षाएं</h2>
+    <p>कक्षा संबंधी जानकारी</p>
+  </div>
+  <div class="cards classes">
+    <div class="card"><div class="card-icon">📖</div><h3>कक्षा 9वीं</h3><p>कक्षा 9वीं की जानकारी</p></div>
+    <div class="card"><div class="card-icon">📘</div><h3>कक्षा 10वीं</h3><p>कक्षा 10वीं की जानकारी</p></div>
+    <div class="card"><div class="card-icon">📗</div><h3>कक्षा 11वीं</h3><p>कक्षा 11वीं की जानकारी</p></div>
+    <div class="card"><div class="card-icon">📕</div><h3>कक्षा 12वीं</h3><p>कक्षा 12वीं की जानकारी</p></div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers" style="background:white">
+  <div class="section-title">
+    <h2>हमारे शिक्षक एवं प्राचार्य</h2>
+    <p>विद्यालय के मार्गदर्शक</p>
+  </div>
+  <div class="cards">
+    <div class="card teacher">
+      <div class="avatar">👨‍💼</div>
+      <h3>विद्यालय के प्राचार्य</h3>
+      <p>प्राचार्य का नाम यहां लिखें</p>
+    </div>
+    <div class="card teacher">
+      <div class="avatar">👨‍🏫</div>
+      <h3>शिक्षक</h3>
+      <p>शिक्षक का नाम यहां लिखें</p>
+    </div>
+    <div class="card teacher">
+      <div class="avatar">👩‍🏫</div>
+      <h3>शिक्षिका</h3>
+      <p>शिक्षिका का नाम यहां लिखें</p>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICES -->
+<section id="notices">
+  <div class="section-title">
+    <h2>सूचना एवं नोटिस बोर्ड</h2>
+    <p>विद्यालय की महत्वपूर्ण सूचनाएं</p>
+  </div>
+
+  <div class="search-box">
+    <input type="search" id="search" placeholder="सूचना खोजें...">
+    <button onclick="searchNotices()">खोजें</button>
+  </div>
+
+  <div id="noticeList">
+    <div class="notice">
+      <small>विद्यालय सूचना</small>
+      <h3>विद्यालय की नई सूचनाएं</h3>
+      <p>यहां विद्यालय की नई सूचना अपडेट करें।</p>
+    </div>
+    <div class="notice">
+      <small>प्रवेश सूचना</small>
+      <h3>नवीन प्रवेश संबंधी जानकारी</h3>
+      <p>प्रवेश की तारीख और आवश्यक दस्तावेज यहां लिखें।</p>
+    </div>
+    <div class="notice">
+      <small>परीक्षा सूचना</small>
+      <h3>परीक्षा एवं समय-सारणी</h3>
+      <p>परीक्षा से जुड़ी जानकारी यहां अपडेट करें।</p>
+    </div>
+  </div>
+  <div class="empty" id="noNotice">कोई सूचना नहीं मिली।</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="background:white">
+  <div class="section-title">
+    <h2>फोटो गैलरी</h2>
+    <p>हमारे विद्यालय की यादगार झलकियां</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">🏫</div>
+    <div class="gallery-item">📚</div>
+    <div class="gallery-item">🎓</div>
+    <div class="gallery-item">🏏</div>
+    <div class="gallery-item">🎉</div>
+    <div class="gallery-item">🌳</div>
+  </div>
+  <p style="text-align:center;margin-top:18px;color:#777">
+    वास्तविक स्कूल की फोटो जोड़ने के लिए नीचे दिए गए निर्देश देखें।
+  </p>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-title">
+    <h2>हमारी उपलब्धियां</h2>
+    <p>विद्यालय की सफलता और गौरव</p>
+  </div>
+  <div class="cards">
+    <div class="achievement">
+      <h2>🏆</h2>
+      <h3>शैक्षणिक उपलब्धियां</h3>
+      <p>विद्यालय के परीक्षा परिणाम और पुरस्कार जोड़ें।</p>
+    </div>
+    <div class="achievement">
+      <h2>⚽</h2>
+      <h3>खेल उपलब्धियां</h3>
+      <p>खेल प्रतियोगिताओं की उपलब्धियां जोड़ें।</p>
+    </div>
+    <div class="achievement">
+      <h2>🌟</h2>
+      <h3>अन्य गतिविधियां</h3>
+      <p>सांस्कृतिक और अन्य उपलब्धियां जोड़ें।</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:white">
+  <div class="section-title">
+    <h2>संपर्क करें</h2>
+    <p>Government Sandipani School Chhatwai</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2 style="color:#123b70">संपर्क जानकारी</h2>
+      <p>📍 <b>पता:</b> छतवई, जिला शहडोल, मध्य प्रदेश</p>
+      <p>🏫 <b>विद्यालय:</b> Government Sandipani School</p>
+      <p>📞 <b>फोन:</b> आधिकारिक नंबर यहां जोड़ें</p>
+      <p>✉️ <b>ईमेल:</b> आधिकारिक ईमेल यहां जोड़ें</p>
+    </div>
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <h2 style="color:#123b70">संदेश भेजें</h2>
+      <input type="text" id="name" placeholder="आपका नाम" required>
+      <input type="email" id="email" placeholder="आपका ईमेल" required>
+      <textarea id="message" rows="4" placeholder="अपना संदेश लिखें" required></textarea>
+      <button type="submit" class="btn">संदेश तैयार करें</button>
+      <p id="formStatus" style="font-size:12px;color:#777;margin-top:8px">
+        संदेश भेजने के लिए आधिकारिक ईमेल जोड़ना जरूरी है।
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <h3>🏫 Government Sandipani School Chhatwai</h3>
+  <p>छतवई, जिला शहडोल, मध्य प्रदेश</p>
+  <p>ज्ञान • अनुशासन • संस्कार</p>
+  <p style="margin-top:15px;font-size:12px">
+    © <span id="year"></span> Government Sandipani School. All Rights Reserved.
+  </p>
+</footer>
+
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="ऊपर जाएं">↑</button>
+
+<script>
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("active");
+}
+function closeMenu(){
+  document.getElementById("nav").classList.remove("active");
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+function searchNotices(){
+  let value=document.getElementById("search").value.toLowerCase().trim();
+  let notices=document.querySelectorAll(".notice");
+  let count=0;
+
+  notices.forEach(notice=>{
+    let match=notice.innerText.toLowerCase().includes(value);
+    notice.style.display=match?"block":"none";
+    if(match) count++;
+  });
+
+  document.getElementById("noNotice").style.display=count===0?"block":"none";
+}
+
+document.getElementById("search").addEventListener("input",searchNotices);
+
+function sendMessage(event){
+  event.preventDefault();
+
+  // यहां स्कूल का आधिकारिक ईमेल पता डालें
+  const schoolEmail="YOUR_SCHOOL_EMAIL@example.com";
+
+  if(schoolEmail==="YOUR_SCHOOL_EMAIL@example.com"){
+    alert("पहले कोड में स्कूल का आधिकारिक ईमेल पता जोड़ें।");
+    return;
+  }
+
+  let name=document.getElementById("name").value;
+  let email=document.getElementById("email").value;
+  let message=document.getElementById("message").value;
+
+  let subject=encodeURIComponent("School Website Contact");
+  let body=encodeURIComponent(
+    "नाम: "+name+"\nईमेल: "+email+"\nसंदेश: "+message
+  );
+
+  window.location.href="mailto:"+schoolEmail+
+    "?subject="+subject+"&body="+body;
+}
+</script>
+
+</body>
+</html>
